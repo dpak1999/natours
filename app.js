@@ -10,12 +10,22 @@ const tours = JSON.parse(
 
 /*MIDDLEWARES */
 app.use(express.json());
+app.use((req, res, next) => {
+  console.log('Middlewares working fine');
+  next();
+});
+app.use((req, res, next) => {
+  req.requestTime = new Date().toISOString();
+  next();
+});
 
 /*HELPER FUNCTIONS FOR ROUTES */
 // Getting all tours
 const getAllTours = (req, res) => {
+  console.log(req.requestTime);
   res.status(200).json({
     status: 'success',
+    requestedAt: req.requestTime,
     results: tours.length,
     data: { tours },
   });
