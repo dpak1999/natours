@@ -1,15 +1,18 @@
 /*PACKAGES*/
 const fs = require('fs');
 const express = require('express');
+const morgan = require('morgan');
 
 /*VARIABLES*/
 const app = express();
+
 const tours = JSON.parse(
   fs.readFileSync(`${__dirname}/dev-data/data/tours-simple.json`)
 );
 
 /*MIDDLEWARES */
 app.use(express.json());
+app.use(morgan('dev'));
 app.use((req, res, next) => {
   console.log('Middlewares working fine');
   next();
@@ -19,7 +22,7 @@ app.use((req, res, next) => {
   next();
 });
 
-/*HELPER FUNCTIONS FOR ROUTES */
+/* ROUTE HANDLERS*/
 // Getting all tours
 const getAllTours = (req, res) => {
   console.log(req.requestTime);
