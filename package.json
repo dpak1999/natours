@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Natours full stack web app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpak1999/natours.git"
+  },
+  "author": "Deepak Kumar Dash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dpak1999/natours/issues"
+  },
+  "homepage": "https://github.com/dpak1999/natours#readme",
+  "dependencies": {
+    "express": "4.16.4"
+  }
+}
