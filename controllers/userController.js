@@ -1,27 +1,33 @@
 /*IMPORTING PACKAGES */
-const fs = require('fs');
 
 // Getting all users
 exports.getAllUsers = (req, res) => {
   res.status(500).json({
     status: 'error',
-    message: 'This route is not yet defined',
+    message: 'This route is not yet defined'
   });
 };
 
 // Creating a user
 exports.createUser = (req, res) => {
-  res.status(500).json({
-    status: 'error',
-    message: 'This route is not yet defined',
-  });
+  try {
+    res.status(500).json({
+      status: 'error',
+      message: 'This route is not yet defined'
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: 'failed',
+      message: err
+    });
+  }
 };
 
 // Getting a specific user
 exports.getUser = (req, res) => {
   res.status(500).json({
     status: 'error',
-    message: 'This route is not yet defined',
+    message: 'This route is not yet defined'
   });
 };
 
@@ -29,7 +35,7 @@ exports.getUser = (req, res) => {
 exports.updateUser = (req, res) => {
   res.status(500).json({
     status: 'error',
-    message: 'This route is not yet defined',
+    message: 'This route is not yet defined'
   });
 };
 
@@ -37,6 +43,6 @@ exports.updateUser = (req, res) => {
 exports.deleteUser = (req, res) => {
   res.status(500).json({
     status: 'error',
-    message: 'This route is not yet defined',
+    message: 'This route is not yet defined'
   });
 };
