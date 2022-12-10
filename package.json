@@ -19,7 +19,7 @@
   "homepage": "https://github.com/dpak1999/natours#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "4.16.4",
+    "express": "4.17.3",
     "mongoose": "5.5.2",
     "morgan": "^1.10.0"
   },
